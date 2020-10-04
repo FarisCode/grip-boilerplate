@@ -1,15 +1,15 @@
 import React from "react";
 import { Story, Meta } from "@storybook/react/types-6-0";
 
-import { Box, BoxProps } from "./Box";
+import { SearchBar, SearchBarProps } from "./SearchBar";
 
 export default {
-  title: "Box",
-  component: Box,
+  title: "SearchBar",
+  component: SearchBar,
 } as Meta;
 
-const Template: Story<BoxProps> = (args) => (
-  <Box {...args} />
+const Template: Story<SearchBarProps> = (args) => (
+  <SearchBar {...args} />
 );
 
 export const DefaultStory = Template.bind({});
