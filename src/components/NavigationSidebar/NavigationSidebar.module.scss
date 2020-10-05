@@ -1,3 +1,157 @@
-.container { 
+.container {
+  width: 249px;
+  height: 100vh;
+  min-height: 706px;
+  background-color: #2a2c34;
+  font-family: "Inter", sans-serif;
+  transition: width 0.3s;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
 
+  .red {
+    color: #ff715b;
+    font-weight: 500;
+  }
+
+  .green {
+    color: #3ccf91;
+    font-weight: 500;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: 600;
+    overflow: hidden;
+    font-size: 32px;
+    line-height: 39px;
+    padding: 20px 0;
+
+    div {
+      width: 66px;
+      overflow: hidden;
+      transition: width 0.2s;
+    }
+
+    span {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      background-color: #ff715b;
+      margin-left: 2px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .sidebarContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    height: calc(100vh - 79px);
+    min-height: 627px;
+  }
+
+  .mainMenu {
+    margin: 20px;
+
+    .label {
+      height: 14px;
+      transition: 0.2s;
+      overflow: hidden;
+      font-size: 12px;
+      color: #898a8e;
+      line-height: 14px;
+      display: block;
+      margin: 16px 18px;
+
+      &.larger {
+        margin: 16px 16px;
+        font-size: 14px;
+      }
+      margin-top: 20px;
+    }
+  }
+
+  .secMenu {
+    margin: 20px;
+
+    .options {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    }
+    .collapseBtn {
+      cursor: pointer;
+      width: fit-content;
+      margin: 20px 18px 6px;
+
+      img {
+        width: 24px;
+      }
+
+      &:hover img {
+        filter: brightness(0) invert(100%);
+      }
+    }
+  }
+
+  .menuItem {
+    height: 45px;
+    border-radius: 9px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+
+    img {
+      transition: inherit;
+      width: 20px;
+      margin: 0 20px;
+    }
+
+    div {
+      transition: inherit;
+      overflow: hidden;
+      max-width: 150px;
+      white-space: nowrap;
+    }
+
+    &:hover,
+    &.active {
+      background-color: #3c5ccf;
+
+      img {
+        filter: brightness(0) invert(100%);
+      }
+    }
+  }
+
+  &.collapsed {
+    width: 95px;
+
+    .mainMenu .label {
+      height: 0px;
+      margin: 0;
+    }
+
+    .menuItem div {
+      max-width: 0;
+    }
+
+    .menuItem img {
+      margin: 0 18px;
+    }
+
+    .secMenu .collapseBtn {
+      margin: 20px 15px 6px;
+    }
+
+    .logo div {
+      width: 24px;
+    }
+  }
 }
