@@ -1,3 +1,46 @@
-.container { 
-
+.container {
+  width: 517px;
+  height: 318px;
+  background-color: #2a2c34;
+  border-radius: 13px;
+  color: #fff;
+  font-family: inter, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  .label {
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .chart {
+    width: 100%;
+    height: calc(100% - 40px);
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    .bar{
+      text-align: center;
+      width: 10%;
+      color: #9590A0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 100%;
+      .label{
+        font-size: 12px;
+      }
+      .value{
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .fill{
+        transition: 0.1s;
+        min-height: 1px;
+        background-color: #3CCF91;
+        border-radius: 10px;
+        width: 100%;
+        margin: 7px 0;
+      }
+    }
+  }
 }
